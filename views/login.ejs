@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("./partials/header") %>
+    <title>Document</title>
+
+</head>
+
+<body>
+  <%- include("./partials/msg") %>
+
+    <div class="container  align-items-center justify-content-center min-vh-100 " >
+        <div class="row">
+          <div class="col-lg-6  mx-auto mt-4">
+            <div class="card shadow">
+              <div class="card-header bg-primary">
+                <h3 class="text-light">Login</h3>
+      
+              </div>
+              <div class="card-body p-4 ">
+                <form action="/user/login" method="post">
+
+                  <div class="mb-3">
+                    <label for="email">Email</label>
+                    <input
+                      type="email"
+                      name="email"
+                      class="form-control form-control-lg"
+                      placeholder="Enter email"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="name">Password</label>
+                    <input
+                      type="password"
+                      name="password"
+                      class="form-control form-control-lg"
+                      placeholder="Enter password"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3 ">
+                    <input
+                      type="submit"
+                      name="submit"
+                      value="Add User"
+                      class="btn btn-primary "
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+<%- include("./partials/footer") %>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary "data-bs-theme="dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ">
+        <% if (locals.user) { %>
+          <li class="nav-item">
+            <a class="nav-link" href="/blog/add-blog">Add Blog</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <%= locals.user.name %>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/user/logout">Logout</a></li>
+            </ul>
+          </li>
+  
+        <% }  else {%>
+          <li class="nav-item">
+            <a class="nav-link" href="/user/signup">create account</a>
+          </li>
+          <li class="nav-item">
+            <a   type="button" class="btn btn-secondary" href="/user/login">Logout</a>
+          </li>
+
+          <% } %>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- < if (locals.user) { %>
+  <p>Debug: User name is  locals.user.name %></p>
+<} else { %>
+  <p>Debug: No user logged in</p>
+ } %> -->

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("./partials/head") %>
+    <title>Document</title>
+
+</head>
+<%- include("./partials/nav") %>
+
+<body>
+  <%- include("./partials/msg") %>
+
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-6  mx-auto mt-4">
+            <div class="card shadow">
+              <div class="card-header bg-primary">
+                <h3 class="text-light">Add a blog</h3>
+      
+              </div>
+              <div class="card-body p-4">
+                <form action="/blog/add-blog" method="post" enctype="multipart/form-data">
+                  <div class="mb-3">
+                    <label for="title">Title</label>
+                    <input
+                      type="text"
+                      name="title"
+                      class="form-control form-control-lg"
+                      placeholder="Enter title"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="image" class="form-label">Image</label>
+                    <input
+                      type="file"
+                      id="image"
+                      name="image"
+                      class="form-control form-control-lg"
+                      required
+                    />
+                  </div>
+                  
+                  
+                  <div class="mb-3">
+                    <label for="content">Content</label>
+                    <textarea
+                      id="content"
+                      name="content"
+                      class="form-control form-control-lg"
+                      placeholder="Enter content"
+                      required
+                    ></textarea>
+                  </div>
+                  <div class="mb-3 ">
+                    <input
+                      type="submit"
+                      title="submit"
+                      value="Add User"
+                      class="btn btn-primary "
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+<%- include("./partials/footer") %>
+
+</body>
+</html>
